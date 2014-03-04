@@ -11,7 +11,7 @@ public class CameraFollow : MonoBehaviour
 	public Vector2 minXAndY;		// The minimum x and y coordinates the camera can have.
 
 
-	private Transform player;		// Reference to the player's transform.
+	private Transform player = GameObject.FindGameObjectWithTag("Player").transform;		// Reference to the player's transform.
 
 
 	void Awake ()
