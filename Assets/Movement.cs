@@ -1,39 +1,39 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Movement : MonoBehaviour {
-
-	public KeyCode moveRight = new KeyCode();
-	public KeyCode moveLeft = new KeyCode();
-	public KeyCode jump = new KeyCode();
+public class Movement : MonoBehaviour 
+{
+	public KeyCode moveRightKey = new KeyCode();
+	public KeyCode moveLeftKey = new KeyCode();
+	public KeyCode jumpKey = new KeyCode();
 	public float velocity = 5;
+	Vector2 newVel = new Vector2();	
 
 	// Update is called once per frame
+	//void jump()
+
 	void Update () 
 	{
-		if (Input.GetKey(moveRight))
+
+		if (Input.GetKey (moveRightKey)) 
 		{
-			Vector2 newVel = rigidbody2D.velocity;
+			newVel.y = rigidbody2D.velocity.y;
 			newVel.x = velocity;
 			rigidbody2D.velocity = newVel;
-		}
-		else if (Input.GetKey(moveLeft))
+		} 
+		else if (Input.GetKey (moveLeftKey)) 
 		{
-			Vector2 newVel = rigidbody2D.velocity;
-			newVel.x = velocity *-1;
+			newVel.y = rigidbody2D.velocity.y;
+			newVel.x = -velocity;
 			rigidbody2D.velocity = newVel;
-		}
-		else if (Input.GetKey(jump))
+		} 
+		else
+			newVel.x = 0;
+		if (Input.GetKey (jumpKey)) 
 		{
-			Vector2 newVel = rigidbody2D.velocity;
 			newVel.y = velocity;
 			rigidbody2D.velocity = newVel;
-		}
-		else 
-		{
-			Vector2 newVel = rigidbody2D.velocity;
-			newVel.x = 0;
-			rigidbody2D.velocity = newVel;
-		}
+		} 
+
 	}
 }
