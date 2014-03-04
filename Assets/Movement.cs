@@ -31,8 +31,11 @@ public class Movement : MonoBehaviour
 			newVel.x = 0;
 		if (Input.GetKey (jumpKey)) 
 		{
+			if(rigidbody2D.velocity.y==0)
+			{
 			newVel.y = velocity;
 			rigidbody2D.velocity = newVel;
+			}
 		} 
 
 	}

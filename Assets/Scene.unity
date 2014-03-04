@@ -280,10 +280,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d4dd433fe63b340954f3a7bb0e7778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveRight: 275
-  moveLeft: 276
-  jump: 273
-  velocity: 10
+  moveRightKey: 275
+  moveLeftKey: 276
+  jumpKey: 273
+  velocity: 7
 --- !u!61 &1812417469
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -305,8 +305,8 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
